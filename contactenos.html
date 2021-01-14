@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ValGlobos</title>
+    <link href="img/party_balloons_50px.png" rel="icon">
+    <link rel="stylesheet" href="estiloindex.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="funciones.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script> 
+
+   <!-- plugins -->
+
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+   
+      <!-- galeria de imagenes plugings -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+   <link rel="stylesheet" href="gallery-grid.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <div class="menu">
+        <ul id="menu">
+            <li><img src="img\phone_50px.png"> 974103951</li>
+            <li><img src="img\correo.png"> globos@valglobos.cl</li>
+            <li><img src="img\marker_50px.png"> Santiago, Chile</li>
+        </ul>              
+    </div>  
+    <div class="topnav" id="myTopnav">
+      <a onclick="location.href='index.html'" class="active">Inicio</a>
+      <a onclick="location.href='decoraciones.html'">Decoraciones</a>
+      <a onclick="location.href='contactenos.html'">Contactenos</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+</header>
+<body>
+  <section id="intro2" >
+    <div class="container">
+      <div class="d1">
+            <h1 class="card-title">Envianos tu cotización</h1>
+        <div class="form">
+            <form id="formulario" action="contactenos.html"   method="post"  >
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" name="nombre" onkeypress="return soloLetras(event)" class="form-control" id="nombre" placeholder="Tu Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" name="apellido" onkeypress="return soloLetras(event)" class="form-control" id="apellido" placeholder="Tu Apellido" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                    <div class="validate"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="email" class="form-control" name="email_contacto" id="email_contacto" placeholder="Tu Email" data-rule="email_contacto" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>           
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" name="asunto" id="asunto" placeholder="Asunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="mensaje" id="mensaje"rows="5" data-rule="required" data-msg="" placeholder="Por favor, escribe tu mensaje"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="text-center">    <button class="btn btn-primary" type="submit" onclick="sendEmail()">Enviar</button></div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </section>
+    <div class="footer">
+      <ul id="footer">
+        <li><img src="img\whatsapp abajo.png"> 974103951</li>
+        <li><img src="img\clock_50px.png"> Lunes a Viernes 10:00 - 18:00 hrs</li>
+        <li><img src="img\email_50px.png"> globos@valglobos.cl></li>
+      </ul>   
+    </div>    
+    <div class="social">
+      <a href="http://www.facebook.com/"><img src="img/facebook_50px.png" alt="facebook"></a>
+      <a href="https://www.youtube.com/watch?v=examplevideo"><img src="img/play_button_50px.png" alt="youtube"></a>
+      <a href="http://instagram.com/valvergara27"><img src="img/instagram_50px.png" alt="instagram"></a>
+      <a href="https://api.whatsapp.com/send"><img src="img\whatsapp original.png" alt="whatsapp"></a>
+    </div>
+</body>
+        <!-- plugins -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+</html>
